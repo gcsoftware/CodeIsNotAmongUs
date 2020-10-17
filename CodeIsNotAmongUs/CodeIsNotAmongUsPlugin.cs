@@ -25,10 +25,10 @@ namespace CodeIsNotAmongUs
             var ip = split[0];
             var port = ushort.TryParse(split.ElementAtOrDefault(1), out var p) ? p : (ushort) 22023;
 
-            defaultRegions.Add(new KMDGIDEDGGM(
+            defaultRegions.Insert(0, new KMDGIDEDGGM(
                 Name.Value, ip, new[]
                 {
-                    new EEKGADNPDBH("Master-1", ip, port)
+                    new EEKGADNPDBH($"{Name.Value}-Master-1", ip, port)
                 })
             );
 
